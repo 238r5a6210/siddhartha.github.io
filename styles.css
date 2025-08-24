@@ -1,50 +1,50 @@
 :root{
-  --bg:#050816;
-  --panel:#0b1026;
-  --card:#0f1735;
-  --border:#1e2a57;
-  --accent:#7dd3fc;
-  --accent-2:#a78bfa;
-  --text:#e6eefc;
-  --muted:#9fb3c8;
-  --shadow:0 12px 30px rgba(0,0,0,.35);
+  --bg:#0b1220;
+  --panel:#ffffff;
+  --ink:#0f172a;
+  --muted:#334155;
+  --brand:#2563eb;
+  --brand-2:#22d3ee;
+  --ring:#cbd5e1;
+  --card:#f8fafc;
+  --border:#e2e8f0;
   --radius:18px;
+  --shadow:0 10px 30px rgba(2,6,23,.08);
 }
 *{box-sizing:border-box}
-html,body{margin:0;padding:0;background:radial-gradient(1200px 800px at 20% -10%,#0b1538 0%,#050816 50%,#050816 100%);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
-a{color:var(--accent);text-decoration:none}
+html,body{margin:0;padding:0;background:linear-gradient(180deg,#0b1220 0%,#111827 100%);font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink)}
+.container{max-width:1180px;margin:0 auto;padding:24px}
+a{color:var(--brand);text-decoration:none}
 a:hover{text-decoration:underline}
-.container{max-width:1200px;margin:0 auto;padding:24px}
-.nav{position:sticky;top:0;z-index:20;background:#050816cc;backdrop-filter:saturate(150%) blur(8px);border-bottom:1px solid var(--border)}
+.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.08);backdrop-filter:blur(10px) saturate(150%);border-bottom:1px solid rgba(255,255,255,.15)}
 .nav .container{display:flex;align-items:center;gap:14px}
-.brand{font-weight:900;letter-spacing:.4px}
+.brand{color:white;font-weight:900;letter-spacing:.3px}
+.link{color:#e5e7eb}
+.link:hover{color:white}
 .spacer{flex:1}
-.nav a.link{padding:12px;border-radius:12px}
-.nav a.link:hover{background:#0a1230}
-.nav .btn{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#041225;padding:10px 14px;border-radius:12px;font-weight:800;box-shadow:var(--shadow)}
-.hero{padding:56px 0 24px;background:
-  radial-gradient(600px 300px at 80% -10%,#1b2a5b40,transparent 70%),
-  radial-gradient(600px 400px at 10% 20%,#1b2a5b33,transparent 70%)}
-.hero .title{font-size:46px;line-height:1.1;margin:0 0 10px}
-.hero .subtitle{color:var(--muted);max-width:70ch}
-.row{display:flex;flex-wrap:wrap;gap:16px}
-.btn{display:inline-block;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#041225;padding:12px 16px;border-radius:14px;font-weight:800;box-shadow:var(--shadow)}
-.btn.ghost{background:#0b1026;color:var(--text);border:1px solid var(--border)}
-.section{padding:28px 0}
-.h2{font-size:28px;margin:0 0 8px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:12px}
-.card{background:linear-gradient(180deg,#0d1634,#0b122e);border:1px solid var(--border);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}
-.card h3{margin:8px 0}
-.badge{display:inline-block;background:#0a1230;border:1px solid var(--border);color:#7dd3fc;padding:6px 10px;border-radius:999px;font-size:12px}
-.small{color:var(--muted);font-size:14px}
-.img{width:100%;height:160px;object-fit:cover;border-radius:14px;border:1px solid var(--border)}
-.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
-.gallery img{width:100%;height:120px;object-fit:cover;border-radius:12px;border:1px solid var(--border)}
-.footer{border-top:1px solid var(--border);margin-top:36px}
-.kicker{font-weight:800;color:#9ae6ff;letter-spacing:.2em;font-size:12px;text-transform:uppercase}
-.quote{font-size:18px;line-height:1.5;background:#0b122e;border-left:4px solid #7dd3fc;padding:14px;border-radius:12px}
-.table{width:100%;border-collapse:separate;border-spacing:0 10px}
-.table th,.table td{padding:10px 12px;text-align:left;border-bottom:1px dashed #243163}
-.hero-cta{margin-top:16px}
+.btn{display:inline-block;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:white;padding:12px 16px;border-radius:14px;font-weight:800;box-shadow:var(--shadow)}
+.btn.ghost{background:transparent;color:#e5e7eb;border:1px solid rgba(255,255,255,.25)}
+.hero{padding:56px 0 24px;color:#e5e7eb}
+.title{font-size:46px;line-height:1.1;margin:0 0 10px}
+.subtitle{max-width:70ch;color:#cbd5e1}
 .col2{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}
-@media (max-width:900px){.col2{grid-template-columns:1fr} .hero .title{font-size:36px}}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+.gallery img{width:100%;height:120px;object-fit:cover;border-radius:12px;box-shadow:var(--shadow)}
+.section{padding:28px 0}
+.h2{font-size:28px;margin:0 0 8px;color:white}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:12px}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}
+.card h3{margin:8px 0}
+.small{color:var(--muted);font-size:14px}
+.img{width:100%;height:160px;object-fit:cover;border-radius:12px;border:1px solid var(--border)}
+.badge{display:inline-block;background:#eff6ff;border:1px solid #bfdbfe;color:#1d4ed8;padding:6px 10px;border-radius:999px;font-size:12px}
+.quote{font-size:18px;line-height:1.5;background:#0b1220;color:#e5e7eb;border-left:4px solid #60a5fa;padding:14px;border-radius:12px}
+.table{width:100%;border-collapse:separate;border-spacing:0 10px;background:var(--panel);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.table th,.table td{padding:10px 12px;text-align:left;border-bottom:1px dashed #e2e8f0}
+.footer{border-top:1px solid rgba(255,255,255,.12);margin-top:36px;color:#cbd5e1}
+.kicker{font-weight:800;color:#93c5fd;letter-spacing:.2em;font-size:12px;text-transform:uppercase}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.callout{background:#ecfeff;border:1px solid #cffafe;border-radius:14px;padding:12px}
+.list{margin:8px 0 0 18px}
+.code{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;background:#0b1220;color:#e5e7eb;padding:2px 6px;border-radius:6px}
+@media (max-width:900px){.col2{grid-template-columns:1fr} .title{font-size:36px}}
